@@ -1,0 +1,96 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+###
+GET http://localhost:3000/user/tweets/feed/
+Content-Type: application/json
+
+{
+      "username": "SrBachchan",
+      "tweet": "T 3859 - do something wonderful, people may imitate it ..",
+      "dateTime": "2021-04-07 14:50:19"
+   }   
+###
+GET http://localhost:3000/user/following/
+Content-Type: application/json
+
+{
+    "name": "Narendra Modi"
+  }
+
+###
+GET http://localhost:3000/user/followers/
+Content-Type: application/json
+
+{
+    "name": "Narendra Modi"
+  }
+
+###
+GET http://localhost:3000/tweets/1/
+Content-Type: application/json
+
+ {
+       "tweet": "T 3859 - do something wonderful, people may imitate it ..",
+       "likes": 3,
+       "replies": 1,
+       "dateTime": "2021-04-07 14:50:19"
+    }
+
+###
+GET http://localhost:3000//tweets/:tweetId/likes/
+Content-Type: application/json 
+
+{
+       "likes": ["albert", ]
+    }
+###
+
+GET http://localhost:3000/tweets/:tweetId/replies/
+Content-Type: application/json
+
+{
+           "replies": [
+             {
+               "name": "Narendra Modi",
+               "reply": "When you see it.."
+              },
+            ]
+        }
+###
+GET http://localhost:3000/user/tweets/
+Content-Type: application/json
+
+{
+    "tweet": "Ready to don the Blue and Gold",
+    "likes": 3,
+    "replies": 4,
+    "dateTime": "2021-4-3 08:32:44"
+  }
+  
+###
+POST http://localhost:3000/user/tweets/
+Content-Type: application/json
+
+{
+   "tweet": "The Mornings..."
+}
+
+###
+DELETE http://localhost:3000/tweets/:tweetId/
